@@ -35,34 +35,52 @@
 					<div class="select_bord ">
 						<label> Select bord</label>
 						<select id="sel"></select>
+						<button id="delete_current" class="delete_current"></button>
 					</div>
 					<div class="control_buttons ">
 						<div class="dir_buttons ">
-							<button id="r" class="r">Right</button>
-							<button id="l" class="l">Left</button>
-							<button id="u" class="u">Up</button>
-							<button id="d" class="d">Down</button>
+							<button id="r" class="r"></button>
+							<button id="l" class="l"></button>
+							<button id="u" class="u"></button>
+							<button id="d" class="d"></button>
 						</div>
 						<div class="support_buttons ">
 							<label>move step in px </label>
-							<input id="fine" type="range" min=1 max=20>
+							<input id="fine" type="range" class="range_bar" min=1 max=20>
 							<label id="fine_label"> 0</label>
 							<br>
-							<button id="rotate">Rotate</button>
-							<button id="reset">Reset</button>
+							<button id="rotate" class="rotate">Rotate</button>
+							<button id="reset">reset</button>
 						</div>
 					</div>
 				</div>
 				<div class="main_bord ">
+					<img class="width_size_image" src="images/width_bar.png">
+					<img class="height_size_image" src="images/height_bar.png">
+					<div id="borde_width_label" class="width_size">140 cm</div>
+					<div id="borde_height_label" class="height_size">200 cm</div>
 					<div id="new_bordes" class="extract_bord"></div>
+					<button id="change_size_button" class="change_size_button" title="Change Size of main bord">Change Size</button>
+					<div id="change_size_div" class="change_main_size_inputs" hidden>
+						<h3>Change The Main Size</h3>
+						<label> input X</label>
+						<input id="main_x" type="number">
+						<div class="fix_clear"></div>
+						<label> input Y</label>
+						<input id="main_y" type="number">
+						<div class="fix_clear"></div>
+						<button id="save_new_size">Save</button>
+					</div>
+					
 				</div>	
 			</section>
 		</article>
 		<footer>
 			<hr>
-			<h2>Programing by : Khaled.ways@gmail.com</h2>
-			<p>HTML,CSS,JavaScript</p>
-			<p>ver : 0.1 / 2018</p>
+			<h2>Programmed by : Khaled.ways@gmail.com</h2>
+			<h2>Programmed for : Star Metal for Aluminum works</h2>
+			<p>programing languges used : HTML , CSS , JavaScript</p>
+			<p>program ver : 0.2 / 2018</p>
 			<p>Level : Beginner</p>
 			<br><hr><br><br>
 		</footer>
