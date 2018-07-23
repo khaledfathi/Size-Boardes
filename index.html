@@ -1,0 +1,72 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="size board App">
+		<meta name="author" content="khaledfathi@protonmail.com">
+		<title>Size Board App</title>
+		<link rel="stylesheet" href="css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<style></style>
+	</head>
+	<body>
+		<header>
+			<div class="title">
+				<div class="overlay ">
+					<div class="title_text ">
+						<h1>Size Board APP</h1>
+						<p>No more lose size</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<section class="container">
+				<div class="app_controller ">
+					<div class="data ">
+						<label >input X </label>
+						<input id="in_x" type="number">
+						<div class="fix_clear"></div>
+						<label >input Y </label>
+						<input id="in_y" type="number">
+						<div class="fix_clear"></div>
+						<button id="ext">Extract</button>
+					</div>
+					<div class="select_bord ">
+						<label> Select bord</label>
+						<select id="sel"></select>
+					</div>
+					<div class="control_buttons ">
+						<div class="dir_buttons ">
+							<button id="r" class="r">Right</button>
+							<button id="l" class="l">Left</button>
+							<button id="u" class="u">Up</button>
+							<button id="d" class="d">Down</button>
+						</div>
+						<div class="support_buttons ">
+							<label>move step in px </label>
+							<input id="fine" type="range" min=1 max=20>
+							<label id="fine_label"> 0</label>
+							<br>
+							<button id="rotate">Rotate</button>
+							<button id="reset">Reset</button>
+						</div>
+					</div>
+				</div>
+				<div class="main_bord ">
+					<div id="new_bordes" class="extract_bord"></div>
+				</div>	
+			</section>
+		</article>
+		<footer>
+			<hr>
+			<h2>Programing by : Khaled.ways@gmail.com</h2>
+			<p>HTML,CSS,JavaScript</p>
+			<p>ver : 0.1 / 2018</p>
+			<p>Level : Beginner</p>
+			<br><hr><br><br>
+		</footer>
+	<!-- Main Java Script File -->
+		<script src="js/custom.js"></script>
+	</body>	
+</html>
