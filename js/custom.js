@@ -116,8 +116,8 @@ function create_element(tag , textNod="" , ReplaceId , newElementId , value=""){
 extract.onclick = function (){
 	var cm_to_px = convert_cm_to_px(),
 		new_id = create_id(),
-		borde_style="border:1px solid red;position:absolute;right:0;top:0;width:"+cm_to_px[0]*input_x.value+"px"+";height:"+cm_to_px[1]*input_y.value+"px"+";";//style for new borde , width and height depend on the input_x and input _y
-	create_element("div",input_x.value + " X " + input_y.value +"("+new_id[1]+")","new_bordes",new_id[1]);//create div borde
+		borde_style="border:1px solid #0F0;color:#0F0;position:absolute;right:0;top:0;width:"+cm_to_px[0]*input_x.value+"px"+";height:"+cm_to_px[1]*input_y.value+"px"+";";//style for new borde , width and height depend on the input_x and input _y
+	create_element("div",input_x.value + " X " + input_y.value +" ( "+new_id[1]+" )","new_bordes",new_id[1]);//create div borde
 	var new_div = document.getElementById(new_id[1]);
 		new_div.style=borde_style;
 		new_div.setAttribute("class","all_items");
