@@ -25,11 +25,14 @@ var input_x = document.getElementById("in_x"),
 	reset = document.getElementById("reset");
 /********************************/
 
+//stander value for main bord size(width and height)
+var new_x = document.getElementById("main_x").value=140,
+	new_y = document.getElementById("main_y").value=200;
 //convert cm to screen px 
 function convert_cm_to_px (){//cm_x is width size in cm , and cm_y is same but for height (return array [x,y] in px)
 	var new_x = document.getElementById("main_x").value,
-		new_y = document.getElementById("main_y").value,
-		x = 500/new_x,
+		new_y = document.getElementById("main_y").value;
+	var	x = 500/new_x,
 		y = 600/new_y;
 	return [x,y]
 }
