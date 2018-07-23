@@ -59,9 +59,7 @@ save_new_size.onclick = function(){
 		alert("The New Board size is set to ( "+new_x+" X "+new_y+" )");		
 		borde_width_label.innerHTML=new_x+" Cm";
 		borde_height_label.innerHTML=new_y+" Cm";
-		
-	}
-	
+	}	
 };
 /********************************/
 
@@ -73,6 +71,7 @@ function create_id(){
 	return [id_num ,id ];
 }
 /********************************/
+
 //function for rotate bord : parameter (width , height)
 function rotate_fun(elementId){
 	var el=document.getElementById(elementId),
@@ -83,6 +82,8 @@ function rotate_fun(elementId){
 	el.style.width=new_width;
 	el.style.height=new_height;
 }
+/********************************/
+
 //delete current borde and its name in select list 
 delete_item.onclick = function (){
 	var selected = select_board_number.value,
@@ -115,8 +116,8 @@ function create_element(tag , textNod="" , ReplaceId , newElementId , value=""){
 extract.onclick = function (){
 	var cm_to_px = convert_cm_to_px(),
 		new_id = create_id(),
-		borde_style="border:1px solid red;position:absolute;right:0;top:0;width:"+cm_to_px[0]*input_x.value+"px"+";height:"+cm_to_px[1]*input_y.value+"px"+";";//style for new borde , width and height depend on the input_x and input _y
-	create_element("div",input_x.value + " X " + input_y.value +"("+new_id[1]+")","new_bordes",new_id[1]);//create div borde
+		borde_style="border:1px solid #0F0;color:#0F0;position:absolute;right:0;top:0;width:"+cm_to_px[0]*input_x.value+"px"+";height:"+cm_to_px[1]*input_y.value+"px"+";";//style for new borde , width and height depend on the input_x and input _y
+	create_element("div",input_x.value + " X " + input_y.value +" ( "+new_id[1]+" )","new_bordes",new_id[1]);//create div borde
 	var new_div = document.getElementById(new_id[1]);
 		new_div.style=borde_style;
 		new_div.setAttribute("class","all_items");
@@ -129,17 +130,17 @@ extract.onclick = function (){
 };
 /********************************/
 
-
-//wite fine value on lable 
+//write fine value on lable 
 fine.onmousemove = function(){
 	var range_value = fine.value,
 		fine_label = document.getElementById("fine_label");
 	fine_label.innerHTML=range_value;
 };
-var count_r_l=0, //stander value for right and left position
-	count_u_d=0; //stander value for up and down position
+/********************************/
 
 //fix position when change the borde selected to another one (replace the position right and top to count_r_l and count_u_d)
+var count_r_l=0, //stander value for right and left position
+	count_u_d=0; //stander value for up and down position
 function fix_position (){
 	var current = select_board_number.value,
 		borde = document.getElementById("item"+current),
@@ -153,6 +154,8 @@ function fix_position (){
 select_board_number.onchange =function(){
 	fix_position();
 };
+/********************************/
+
 //direction buttons functions 
 r.onclick = function(){//move div to right
 	var borde_num = select_board_number.value,
@@ -179,6 +182,7 @@ d.onclick = function (){//move div to down
 		change_this.style.top=count_u_d;
 };
 /********************************/
+
 //Reset function - remove all value in input x , input y and remove every option in "select bord" also remove all bord/div the program created before , and reset var id_num to 0 
 reset.onclick = function (){
 	"use strict";
@@ -188,6 +192,5 @@ reset.onclick = function (){
 	new_bordes.innerHTML="";
 	id_num=0;
 	count_r_l=0;
-	count_u_d=0;
-	
+	count_u_d=0;	
 };
