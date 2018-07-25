@@ -231,6 +231,18 @@ footer{
 	text-align:center;
 	text-shadow:2px 2px 2px red;
 }
+.github{
+	position:absolute;
+	right:0px;
+	top:1250px;
+	width:160px;
+	height:110px;
+	cursor:pointer;
+}
+.github img{
+	width:60px;
+	height:60px;
+}
 /*end footer*/
 
 /*Start Framework*/
