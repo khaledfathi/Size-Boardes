@@ -51,6 +51,7 @@ article .container{
 	border:1px solid black;
 	width:500px;
 	height:600px;
+	box-sizing:border-box;
 }
 
 .width_size_image,.height_size_image,.width_size,.height_size,.change_size_button{
@@ -230,6 +231,18 @@ article .container{
 footer{
 	text-align:center;
 	text-shadow:2px 2px 2px red;
+}
+.github{
+	position:absolute;
+	right:0px;
+	top:1250px;
+	width:160px;
+	height:110px;
+	cursor:pointer;
+}
+.github img{
+	width:60px;
+	height:60px;
 }
 /*end footer*/
 
