@@ -51,6 +51,7 @@ article .container{
 	border:1px solid black;
 	width:500px;
 	height:600px;
+	box-sizing:border-box;
 }
 
 .width_size_image,.height_size_image,.width_size,.height_size,.change_size_button{

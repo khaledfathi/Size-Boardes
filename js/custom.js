@@ -38,6 +38,18 @@ function convert_cm_to_px (){//cm_x is width size in cm , and cm_y is same but f
 }
 /********************************/
 
+//function for rotate bord : parameter (width , height)
+function rotate_fun(elementId){
+	var el = document.getElementById(elementId),
+		width = el.style.width.slice(0,-2)/convert_cm_to_px()[0],//slice for remove "px" and leave pure numbers
+		height = el.style.height.slice(0,-2)/convert_cm_to_px()[1],
+		new_width = height*convert_cm_to_px()[0],
+		new_height = width*convert_cm_to_px()[1];
+	el.style.width=new_width+"px";
+	el.style.height=new_height+"px";
+}
+/********************************/
+
 //remove hide when press on change size button(onclick event)
 change_size_button.onclick = function(){
 	change_size_div.removeAttribute("hidden");
@@ -69,18 +81,6 @@ function create_id(){
 	id_num+=1
 	var id="item"+id_num;
 	return [id_num ,id ];
-}
-/********************************/
-
-//function for rotate bord : parameter (width , height)
-function rotate_fun(elementId){
-	var el=document.getElementById(elementId),
-		width = el.style.width,
-		height=el.style.height,
-		new_width = height,
-		new_height = width;
-	el.style.width=new_width;
-	el.style.height=new_height;
 }
 /********************************/
 
@@ -116,7 +116,7 @@ function create_element(tag , textNod="" , ReplaceId , newElementId , value=""){
 extract.onclick = function (){
 	var cm_to_px = convert_cm_to_px(),
 		new_id = create_id(),
-		borde_style="border:1px solid #0F0;color:#0F0;position:absolute;right:0;top:0;width:"+cm_to_px[0]*input_x.value+"px"+";height:"+cm_to_px[1]*input_y.value+"px"+";";//style for new borde , width and height depend on the input_x and input _y
+		borde_style="box-sizing:border-box;border:1px solid #0F0;color:#0F0;position:absolute;right:0;top:0;width:"+cm_to_px[0]*input_x.value+"px"+";height:"+cm_to_px[1]*input_y.value+"px"+";";//style for new borde , width and height depend on the input_x and input _y
 	create_element("div",input_x.value + " X " + input_y.value +" ( "+new_id[1]+" )","new_bordes",new_id[1]);//create div borde
 	var new_div = document.getElementById(new_id[1]);
 		new_div.style=borde_style;
